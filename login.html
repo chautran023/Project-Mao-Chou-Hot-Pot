@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mao Chou Chou Hot Pot</title>
+  <link rel="icon" type="image/x-icon" href="img/Favicon.png">
+
+<link rel="stylesheet" href="main.css">
+<script src="main.js"></script>
+
+</head>
+
+<body>
+
+<div class="imglogin"> 
+
+<button class="btn_login" onclick="document.getElementById('id01').style.display='block'" >Login</button>
+
+</div>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/order_page.html" method="post" >
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img/1.0 Logo MCC.png" alt="Avatar" class="avatar">
+    </div>
+
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+
+  </form>
+</div>
+
+
+
+</body>
+</html>
+
