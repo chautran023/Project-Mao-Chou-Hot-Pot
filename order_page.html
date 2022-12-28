@@ -7,108 +7,11 @@
     <title>BILL CALCULATOR</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
-
-    <style>
-        body{
-            font-family: verdana;
-            display: flex;
-        }
-        #menu_container{
-            position: relative;
-            width: 50%;
-            height: 100%;
-            border: 5px solid green;
-            background-image: linear-gradient( 135deg, rgb(214, 8, 8) 10%, #fd5e086b 100%);
-        }
-        #menu{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        figure{
-            position: relative;
-            background-color: rgb(224, 52, 52);
-            width: fit-content; 
-        }
-        .open-button{
-            position: absolute;
-            font-size: 12px;
-            bottom: 1px;
-            left: 85%;
-            cursor: pointer;
-            text-align: center;
-            border-radius: 999px;
-        }
-        section{
-            border: 5px solid brown;
-            width: 50%;
-        }
-        #myForm{
-            position: absolute;
-            display: none;
-            height: fit-content;
-            width: fit-content;
-            margin-top: -50%;
-            margin-left: 20%;
-            background-color: rgb(240, 240, 199);
-            padding: 0px 10px 10px 10px;
-            border: 4px solid olive;
-        }
-        .form-container{
-            position: relative;
-        }
-        #closeform{
-            position: absolute;
-            border: 2px solid black;
-            padding: 0 4px 0 4px; 
-            right: 2px;
-            top: 2px;
-            background:#ccc;
-        }
-        #mon-an{
-            background-color: aquamarine;
-            border: 2px solid #05813d;
-            width: fit-content;
-            padding: 5px;
-            color: rgb(2, 37, 27);
-            border-radius: .25rem;
-            font-style: oblique;
-        }
-        #goimon{
-            margin-left: 35%;
-        }
-        input{
-            width: 15%;
-        }
-        header{
-            font-family: 'Dancing Script', cursive;
-            font-size: 80px;
-            margin-bottom: 10px;
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            color: rgb(239, 248, 245);
-            text-shadow: 1px 1px 1px #333;
-            background-image: src="/1.0 Logo MCC.jpg";
-        }
-        #logo{
-            width: 90px;
-            height: 70px;
-            padding-right: 20px;
-        }
-        figcaption{
-            font-family: Helvetica;
-            font-size: larger;
-            font-weight: bolder;
-            color: rgb(250, 216, 201);
-        }
-        
-          
-    </style>
+    <link rel="stylesheet" href="index.css">
+    
 </head>
 <body>
     <div id="menu_container">
-        
         <header><img id="logo" src="/1.0 Logo MCC.jpg">MENU</header>
         <div id="menu">
             <figure><figcaption>Bún bò</figcaption><img src="https://fakeimg.pl/200/"><button class="open-button" id="1" name = "Bún bò" value=45000 onclick="openForm()">&#43;</button><figcaption>45,000</figcaption></figure><br>
@@ -116,13 +19,16 @@
             <figure><figcaption>Hủ tiếu bò</figcaption><img src="https://fakeimg.pl/200/"><button class="open-button" id="3" name = "Hủ tiếu" value=52000 onclick="openForm()">&#43;</button><figcaption>52,000</figcaption></figure><br>
             <figure><figcaption>Nui xào bò</figcaption><img src="https://fakeimg.pl/200/"><button class="open-button" id="4" name = "Nui xào bò" value=47000 onclick="openForm()">&#43;</button><figcaption>47,000</figcaption></figure><br>
         </div>
+    </div>
+
+    <div id="right_container">
         <div id="myForm">
             <form class="form-container">
                 <p id="mon-an"></p>
-
+                
                 <label><b>Số lượng</b></label>
                 <input type="number" min=0 placeholder="0" id="sl">
-        
+
                 <span><b>x</b></span>
                 <span id="don-gia"></span>
                 <span><b>=</b></span>
@@ -132,90 +38,45 @@
                 <button type="button" id="goimon" onclick="closeForm(this.value)">Đồng ý</button>
             </form>
         </div>
-    </div>
-    <section>
-    <table id="tdata" border="1">
-            <h3><b>PHIẾU TÍNH TIỀN</b></span></h3>
-            <tr>
-                <th>Tên món ăn</th>
-                <th>Số lượng</th>
-                <th>Đơn giá</th>
-                <th>Tạm tính</th>
-            </tr>
-    </table><br/>
-    <div id="thanh_tien">
-            <button type="button" id="tinhtien" onclick="total(); tong_VAT()">Tính tiền</button>
-            <p id="demo2"></p>
-            <p id="demo3"></p>
-    </div>
-    <div id="in_bill">
-        <button type="button" id="in" onclick="inbill()">In bill</button>
-        <p id="demo4"></p>
-    </div>
+    <section id="inbill">
+            <table id="tdata" border="1">
+                <h3><b>PHIẾU TÍNH TIỀN</b></span></h3>
+                <tr>
+                    <th>Tên món ăn</th>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                    <th>Tạm tính</th>
+                </tr>
+        </table><br/>
+        <div id="thanh_tien">
+                <button type="button" id="tinhtien" onclick="total()">Tính tiền</button><br/><br/>
+                <table id="endtable">
+                    <tr>
+                        <td>Trong đó, VAT:</td>
+                        <td id="demo3" class="cell"></td>
+                    </tr>
+                    <tr>
+                        <td>Thành Tiền:</td>
+                        <td id="demo2" class="cell"></td>
+                    </tr>
+                </table>
+        </div>
     </section>
+    <div>
+        <button type="button" id="inbill_button" onclick="inbill('inbill')">In bill</button>
+    </div>
+    <div id="diemthuong">
+        <table id="bangdiem">
+            <tr>
+                <td>Điểm thưởng cho hóa đơn lần này:</td>
+                <td id="demo4"></td>
+            </tr>
+        </table>
+    </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script>
-       
-        function calculate(){
-            soluong = document.getElementById("sl").value;
-            dongia = parseFloat(document.getElementById("don-gia").textContent);
-            var Total = soluong * dongia * 110 / 100;
-            return Total;
-        }
-        
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-
-            var idMonAn = event.target.id;
-            var monAn = document.getElementById(idMonAn).name;
-            var donGia = document.getElementById(idMonAn).value;
-
-            document.getElementById("mon-an").innerHTML = monAn;
-            document.getElementById("don-gia").innerHTML = donGia;
-        }
-
-        var arr=[];
-        var tong = 0.0;
-        var VAT = 0.0;
-        var arrVAT = [];
-        document.getElementById("sl").addEventListener("change", sub);
-
-        function sub(){
-            var sl = document.getElementById("sl").value; 
-            var dg = parseFloat(document.getElementById("don-gia").textContent); 
-            var sub = sl * dg * 110 / 100;
-            document.getElementById("demo").innerHTML = sub; 
-        }
-       
-        function closeForm(){
-            var monAn = document.getElementById("mon-an").textContent;
-            var sl = document.getElementById("sl").value; 
-            var dg = parseFloat(document.getElementById("don-gia").textContent); 
-            var sub = sl * dg * 110 / 100;
-            var vat = sub * 10 / 100;
-            var table = '<tr><td>'+monAn+'</td> <td>'+sl+'</td> <td>'+dg+'</td> <td>'+sub+'</td> </tr>' 
-            $('#tdata').append(table);
-            arr.push(calculate());
-            arrVAT.push(vat);
-            document.getElementById("myForm").style.display = "none";
-        }
-        function total(){
-            var i = 0;
-            for (; i< arr.length; i++){
-                tong = tong + arr[i];
-            }
-            document.getElementById("demo2").innerHTML = "Thành tiền: " + tong + "đ (đã gồm 10% VAT)"; 
-            document.getElementById("tinhtien").disabled = "disabled";
-        }   
-        function tong_VAT(){
-            var i = 0;
-            for (; i< arrVAT.length; i++){
-                VAT = VAT + arr[i];
-            }
-            document.getElementById("demo3").innerHTML = "Trong đó VAT: " + VAT + "đ"; 
-        }
-        
-    </script>
+    <script src="index.js"></script>
+   
 </body>
 </html>
