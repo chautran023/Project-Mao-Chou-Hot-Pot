@@ -1,0 +1,277 @@
+/*===================================
+=            HEADING            =
+===================================*/
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.header-login {
+
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    background-color: white;
+
+}
+.header{
+    width: 100%;
+    background-color: white;
+    height: 90px;
+    margin: 0;
+    border-top: 1px solid gray; 
+
+
+}
+
+.header-login ul {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header-login li a{
+    display: block;
+    padding: 8px;
+    color: gray;
+    text-decoration: none;
+}
+
+.header-login a:hover{
+    color: #e60011;
+
+}
+
+.header-login span {
+    padding-top: 6px;
+}
+
+.header-menu {
+    background-color: white;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.menu-logo {
+    display: flex;
+    float: left;
+    width: 30%;
+    color: #e60011;
+}
+
+
+.menu-logo a{
+
+    color: #e60011;
+    text-decoration: none;
+}
+
+.menu-focus a{
+    color: #e60011;
+}
+
+.menu-big{
+    width: 70%;
+}
+
+.menu-big a:hover {
+    color: #e60011;
+}
+
+.menu-big ul {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 26px;
+    margin-left: 100px;
+    padding-top: 20px;
+}
+
+.menu-big li a{
+    display: block;
+    padding: 8px;
+    color: gray;
+    text-decoration: none;
+    padding-left: 50px;
+}
+
+.menu-mini{
+    display: none;
+    float: right;
+    padding-top: 20px;
+
+}
+
+.menu-mini img{
+    width: 40px;
+}
+/*=====  END OF HEADING  ======*/
+
+/*===================================
+=            MAIN MENU            =
+===================================*/
+.intro{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: tahoma;
+    font-size: larger;
+    color: gray;
+    text-shadow: 1px 1px black;
+}
+
+
+.mySlides {display:none}
+
+.left, .right {
+    cursor:pointer;
+    font-size: 50px;
+    color: rgb(223, 13, 13);
+    margin-top: 45%;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+.left{
+    float:left;
+}
+
+.hover-text-khaki:hover{
+    color:#b4aa50;
+}
+.mySlides{
+    width: 400px;
+    height: 500px;
+}
+
+.display-container{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;
+
+}
+/*=====  END OF MAIN MENU  ======*/
+
+/*--START OF ORDER NOW--*/
+
+.order-now, .fas, button{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    width: fit-content;
+    background-color: #e60011;
+    border: none;
+    border-radius: 10px;
+    padding: 0px 3px 0px 5px;
+    color: white;
+    margin-bottom: 8px;
+    margin-top: 5px;
+    transition: all .5s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+a:focus { outline: none; }
+.order-now:hover  {
+    transform: scale(1.1, 1.1); }
+/*--END OF ORDER NOW--*/
+
+/*--START OF DOTS--*/
+.dot-container{
+    margin-top: -50px;
+    margin-bottom: 18px;
+}
+.dot {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        background-color:rgb(112, 112, 112);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+.active, .dot:hover {
+    background-color: #e4e2e2;
+}
+/*--END OF DOTS--*/
+/*--START OF FOOTER--*/
+.footer {
+
+    background-color: rgb(68, 68, 68);
+    width: 100%;
+    height: 200px;
+}
+.footer-box {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.footer-left {
+    width: 40%;
+    height: 150px;
+    padding-left: 40px;
+}
+
+.footer-left h5 {
+    color: white;
+    font-size: 15px;
+}
+
+.footer-left p {
+    color: rgb(204, 204, 204);
+    font-size: 15px;
+}
+
+
+.footer-right {
+    width: 70%;
+    padding-right: 20px;
+    color: white;
+
+}
+
+.footer-box-2 {
+    background-color: rgb(43, 43, 43);
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(189, 189, 189);
+
+}
+
+.footer-right{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.footer-right p{
+    text-align: center;
+}
+
+.icon-social {
+    margin-left: 200px;
+}
+
+.icon-social span {
+    margin-left: 15px;
+}
+/*--END OF FOOTER--*/
+

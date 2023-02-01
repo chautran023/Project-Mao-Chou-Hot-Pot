@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thanh toán</title>
+<link rel="icon" type="image/x-icon" href="img/Favicon.png">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="checkout.css" media="screen" type="text/css" />
+</head>
+
+<body id="checkout-page">
+    <div id="bill">
+        <header id="masthead">
+            <div class="menu-logo">
+                <a href="index.html"><H1>Mao Chou Hot Pot<span class="tagline">Since 1999</span>
+                </H1></a>
+            </div>
+        </header>
+        <div class="txt-heading">
+            <h1>ĐƠN HÀNG</h1>
+        </div>
+        <!--Bê nguyên div id shopping-cart từ trang order vào-->    
+        <div id="shopping-cart">
+        <table class="tbl-cart" cellpadding="3" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>TÊN MÓN</th>
+                        <th class='text-right' width="10%">ĐƠN GIÁ</th>
+                        <th class='text-right' width="5%">SỐ LƯỢNG</th>
+                        <th class='text-right' width="10%">TẠM TÍNH</th>
+                    </tr>
+                </thead>
+                <!--  Cart table to load data on "add to cart" action -->
+                <tbody id="cartTableBody">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="text-right" colspan="2">Total:</td>
+                        <td id="itemCount" class="text-right" ></td>
+                        <td id="totalAmount" class="text-right"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="sua-don-hang">
+        <button type="button" class="btn-edit" onclick="history.back()">
+            <div class="arrow-left"> </div>
+        </button>
+       
+        <span><button type="button" class="btn-edit" onclick="history.back()">
+        <span class="text-edit">SỬA ĐƠN HÀNG</span></span></button>
+    </div>
+
+		 <form id="checkout-order-form" action="./thankyou.html" method="get">
+		 	<h2>Thông tin giao hàng</h2>
+		 	
+		 	<fieldset id="fieldset-billing">
+		 		<legend>Thông tin giao hàng</legend>
+                <section class="left-sec">
+		 		<div>
+		 			<label for="name">Họ tên</label>
+		 			<input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+                 <div>
+                    <label for="tel">Số điện thoại</label>
+                    <input type="text" name="tel" id="tel" data-type="string" data-message="This field cannot be empty" />
+                </div>
+		 		<div>
+		 			<label for="email">Địa chỉ email</label>
+		 			<input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" />
+		 		</div>
+		 		<div>
+		 			<label for="city">Thành phố</label>
+		 			<input type="text" name="city" id="city" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="address">Quận / Huyện</label>
+		 			<input type="text" name="address" id="dist" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+                <div>
+                    <label for="address">Phường / Xã</label>
+                    <input type="text" name="address" id="ward" data-type="string" data-message="This field cannot be empty" />
+                </div>
+                <div>
+                    <label for="address">Số nhà, đường</label>
+                    <input type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" />
+                </div>
+                </section>
+                <section class="right-sec">
+                <h4>Loại địa chỉ:</h4>
+                <label class="container1">Nhà riêng
+                  <input type="radio" checked="checked" name="radio-place">
+                </label>
+                <label class="container">Văn phòng
+                  <input type="radio" name="radio-place">
+                <h4>Xuất hóa đơn thuế GTGT:</h4>
+                <label class="container2">Có
+                  <input type="radio" checked="checked" name="radio-VAT">
+                </label>
+                <label class="container">Không
+                  <input type="radio" name="radio-VAT">
+                </label>
+                <h4>Ghi chú:</h4>
+                <textarea name="note" rows="10" cols="50">Thêm / Bớt nước lèo...</textarea>
+                </section>
+		 	</fieldset>
+		 	
+		 	<p><input type="submit" id="btn-submit" value="ĐẶT HÀNG" class="btn" /></p>
+            
+		 </form>
+	</div>
+	
+</div>
+
+<div class="footer"> 
+    <div class="footer-box">
+        <div class="footer-left">
+            <h5>Công ty Cổ phần Thương mại Dịch vụ Mao Chou</h5>
+            <p>Trụ sở chính: 53 Điện Biên Phủ, Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh</p>
+            <p>GPĐK: 68686868 cấp ngày 09/04/223</p>
+            <p>ĐT: 028 7771 7789 Email: support@mchotpot.com</p>
+        </div>
+        <div class="footer-right">
+            <p>Lẩu Cung Đình Huế – Nhà hàng dành cho tín đồ ẩm thực.</p>
+            <p>Đặt Bàn Ngay Hôm Nay Để Nhận Nhiều Ưu Đãi.</p>
+            <div class="icon-social">
+                <span> <a href="#"> <img src="img/fb_icon.png"></a> </span>
+                <span class="icon-social"><a href="#"> <img src="img/yt.png"></a></span>
+                <span class="icon-social"><a href="#"> <img src="img/zalo.png"></a></span>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-box-2">
+        <p>© 2023 Mao Chou Hot Pot. All rights reserved</p>
+    </div>
+</div>
+
+<!--Link file script JS vào-->    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="cart.js"></script>
+ 
+</body>
+</html>	
