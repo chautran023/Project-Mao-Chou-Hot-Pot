@@ -11,20 +11,18 @@
     flex-direction: column;
     border: none;
     background-color: #211a1a;
-    width: 100%;
+    width: 35%;
 }
 
 #product-grid{
-    border: none;    
+    border: none;  
+    width: 65%;
 }
 .product-item-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-around;
-    width: 820px;
     background-color: white;
-
 }
 #logo{
     width: 37px;
@@ -43,7 +41,7 @@
 .product-item {
     display: flex;
     flex-direction: row;
-    width: 370px;
+    width: 50%;
 	background: #ffffff;
 	padding: 0px 0px 20px 0px;
     text-align: left;
